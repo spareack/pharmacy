@@ -1,11 +1,16 @@
-import re
+import json
+import os.path
 
 import requests
 
 from django.http import JsonResponse
+from django.shortcuts import render
+from django.conf import settings
+
 from bs4 import BeautifulSoup
 
 from .models import Medicine
+
 
 headers = {
     'User-Agent':
@@ -16,8 +21,8 @@ headers = {
 
 
 def econom():
-    # url = f'https://aptekaeconom.com/catalog/lekarstva-i-bady/lechenie-gemorroya/?SHOWALL_1=1'
-    url = f'https://aptekaeconom.com/catalog/lekarstva-i-bady/lechenie-gemorroya/'
+    url = f'https://aptekaeconom.com/catalog/lekarstva-i-bady/lechenie-gemorroya/?SHOWALL_1=1'
+    # url = f'https://aptekaeconom.com/catalog/lekarstva-i-bady/lechenie-gemorroya/'
     r = requests.get(url, headers=headers)
 
     soup = BeautifulSoup(r.text, "html.parser")
@@ -41,8 +46,16 @@ def econom():
 
 
 def index(request):
-    econom()
-    return JsonResponse({'foo': 'bar'})
+    # econom()
+    return render(request, 'index.html')
+
+
+def manifest(request):
+    return JsonResponse(json.load(open(os.path.join(settings.BASE_DIR, 'build', 'manifest.json'))))
+
+
+def manifest(request):
+    return JsonResponse(json.load(open(os.path.join(settings.BASE_DIR, 'build', 'manifest.json'))))
 
 
 def get_medicines(request):

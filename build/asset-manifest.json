@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e6c13ad2.css",
+    "main.js": "/static/js/main.802c276f.js",
+    "static/js/787.8f0665e3.chunk.js": "/static/js/787.8f0665e3.chunk.js",
+    "static/media/kamen.jpg": "/static/media/kamen.2547dc76a2a69ce8bf19.jpg",
+    "index.html": "/index.html",
+    "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
+    "main.802c276f.js.map": "/static/js/main.802c276f.js.map",
+    "787.8f0665e3.chunk.js.map": "/static/js/787.8f0665e3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.802c276f.js"
+  ]
+}
