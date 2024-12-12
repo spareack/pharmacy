@@ -6,33 +6,33 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('main', '0001_initial'),
+        ("main", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='medicine',
-            name='address',
+            model_name="medicine",
+            name="address",
             field=models.CharField(max_length=200, null=True),
         ),
         migrations.AlterField(
-            model_name='medicine',
-            name='company',
+            model_name="medicine",
+            name="company",
             field=models.CharField(max_length=200, null=True),
         ),
         migrations.AlterField(
-            model_name='medicine',
-            name='link',
+            model_name="medicine",
+            name="link",
             field=models.CharField(max_length=200, null=True),
         ),
         migrations.AlterField(
-            model_name='medicine',
-            name='name',
+            model_name="medicine",
+            name="name",
             field=models.CharField(max_length=200, null=True),
         ),
         migrations.AlterField(
-            model_name='medicine',
-            name='price',
+            model_name="medicine",
+            name="price",
             field=models.IntegerField(null=True),
         ),
     ]
